@@ -31,7 +31,7 @@ export default function HomePage() {
     <div className={inter.className} style={{ color: C.dark }}>
 
       {/* ── Hero ── */}
-      <section style={{ background: C.bg, padding: '100px 32px 88px', maxWidth: 1160, margin: '0 auto' }}>
+      <section className="pt-12 sm:pt-25 pb-16 sm:pb-22" style={{ background: C.bg, paddingLeft: 32, paddingRight: 32, maxWidth: 1160, margin: '0 auto' }}>
         <p style={{ fontSize: 12, fontWeight: 700, color: C.green, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 24 }}>
           Vancouver, BC
         </p>
