@@ -44,7 +44,7 @@ export default function HomePage() {
           maxWidth: 700,
           margin: '0 0 28px'
         }}>
-          Trusted pet care,<br />close to home.
+          Trusted pet care<br />close to home.
         </h1>
         <p style={{ fontSize: 18, color: C.body, lineHeight: 1.65, maxWidth: 460, margin: '0 0 48px' }}>
           Find and compare dog walkers, groomers, and pet sitters across Vancouver neighbourhoods.
