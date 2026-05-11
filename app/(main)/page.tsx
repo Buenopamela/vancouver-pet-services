@@ -69,23 +69,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Stats bar ── */}
-      <div style={{ borderTop: `1px solid ${C.border}`, borderBottom: `1px solid ${C.border}`, background: C.white }}>
-        <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 32px', display: 'flex', flexWrap: 'wrap', gap: '0 40px' }}>
-          {[
-            { value: `${all.length}`, label: 'Service providers' },
-            { value: '5', label: 'Neighbourhoods' },
-            { value: '3', label: 'Service types' },
-            { value: 'Free', label: 'To list your business' },
-          ].map(({ value, label }) => (
-            <div key={label} style={{ padding: '28px 0' }}>
-              <div style={{ fontSize: 22, fontWeight: 800, color: C.dark, letterSpacing: '-0.5px' }}>{value}</div>
-              <div style={{ fontSize: 12, color: C.muted, marginTop: 3, fontWeight: 500 }}>{label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* ── Featured listings ── */}
       <section style={{ maxWidth: 1160, margin: '0 auto', padding: '80px 32px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 40 }}>
