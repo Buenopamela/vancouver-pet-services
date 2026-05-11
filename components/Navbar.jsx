@@ -17,7 +17,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav style={{ display: 'flex', gap: 28, alignItems: 'center' }} className="hidden sm:flex">
+        <nav style={{ gap: 28, alignItems: 'center' }} className="hidden sm:flex">
           <Link href="/listings" style={{ fontSize: 14, color: '#57534E', textDecoration: 'none', fontWeight: 500 }}>Browse</Link>
           <Link href="/list-your-business" style={{ fontSize: 14, color: '#57534E', textDecoration: 'none', fontWeight: 500 }}>List your business</Link>
           <Link href="/listings" style={{
@@ -30,17 +30,26 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          className="sm:hidden flex flex-col gap-1.5 p-1"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-          style={{ background: 'none', border: 'none', cursor: 'pointer' }}
-        >
-          <span style={{ display: 'block', width: 24, height: 2, background: '#1C1917', transition: 'transform 0.2s', transform: open ? 'rotate(45deg) translateY(8px)' : 'none' }} />
-          <span style={{ display: 'block', width: 24, height: 2, background: '#1C1917', transition: 'opacity 0.2s', opacity: open ? 0 : 1 }} />
-          <span style={{ display: 'block', width: 24, height: 2, background: '#1C1917', transition: 'transform 0.2s', transform: open ? 'rotate(-45deg) translateY(-8px)' : 'none' }} />
-        </button>
+        {/* Mobile: green button + hamburger */}
+        <div className="flex sm:hidden items-center gap-3">
+          <Link href="/listings" style={{
+            fontSize: 13, fontWeight: 700, color: '#fff',
+            background: '#16A34A', padding: '8px 16px',
+            borderRadius: 7, textDecoration: 'none',
+            whiteSpace: 'nowrap'
+          }}>
+            Find services
+          </Link>
+          <button
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}
+          >
+            <span style={{ display: 'block', width: 24, height: 2, background: '#1C1917', transition: 'transform 0.2s', transform: open ? 'rotate(45deg) translateY(8px)' : 'none' }} />
+            <span style={{ display: 'block', width: 24, height: 2, background: '#1C1917', transition: 'opacity 0.2s', opacity: open ? 0 : 1, margin: '5px 0' }} />
+            <span style={{ display: 'block', width: 24, height: 2, background: '#1C1917', transition: 'transform 0.2s', transform: open ? 'rotate(-45deg) translateY(-8px)' : 'none' }} />
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
