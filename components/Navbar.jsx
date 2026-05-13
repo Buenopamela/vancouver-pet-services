@@ -18,7 +18,6 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav style={{ gap: 28, alignItems: 'center' }} className="hidden sm:flex">
-          <Link href="/listings" style={{ fontSize: 14, color: '#57534E', textDecoration: 'none', fontWeight: 500 }}>Browse</Link>
           <Link href="/list-your-business" style={{ fontSize: 14, color: '#57534E', textDecoration: 'none', fontWeight: 500 }}>List your business</Link>
           <Link href="/listings" style={{
             fontSize: 13, fontWeight: 700, color: '#fff',
@@ -55,7 +54,6 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div style={{ borderTop: '1px solid #E7E5E4', padding: '16px 32px', display: 'flex', flexDirection: 'column', gap: 16, background: '#F9F6F1' }} className="sm:hidden">
-          <Link href="/listings" onClick={() => setOpen(false)} style={{ fontSize: 15, color: '#1C1917', textDecoration: 'none', fontWeight: 500 }}>Browse services</Link>
           <Link href="/list-your-business" onClick={() => setOpen(false)} style={{ fontSize: 15, color: '#1C1917', textDecoration: 'none', fontWeight: 500 }}>List your business</Link>
           <Link href="/listings" onClick={() => setOpen(false)} style={{
             fontSize: 14, fontWeight: 700, color: '#fff',
