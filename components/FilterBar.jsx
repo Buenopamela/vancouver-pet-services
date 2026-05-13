@@ -4,6 +4,7 @@ const serviceLabels = {
   walker: 'Dog Walkers',
   grooming: 'Groomers',
   sitter: 'Pet Sitters',
+  trainer: 'Dog Trainers',
 }
 
 export default function FilterBar({ neighborhoods, filters, onChange }) {

@@ -7,12 +7,14 @@ const serviceLabels: Record<string, string> = {
   walker: 'Dog Walker',
   grooming: 'Grooming',
   sitter: 'Pet Sitter',
+  trainer: 'Dog Trainer',
 }
 
 const serviceColors: Record<string, string> = {
   walker: 'bg-blue-100 text-blue-800',
   grooming: 'bg-purple-100 text-purple-800',
   sitter: 'bg-amber-100 text-amber-800',
+  trainer: 'bg-green-100 text-green-800',
 }
 
 export async function generateStaticParams() {

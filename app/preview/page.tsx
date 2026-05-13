@@ -21,6 +21,7 @@ const serviceLabels: Record<string, string> = {
   walker: 'Dog Walker',
   grooming: 'Grooming',
   sitter: 'Pet Sitter',
+  trainer: 'Dog Trainer',
 }
 
 export default function PreviewPage() {
