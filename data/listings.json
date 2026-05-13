@@ -8,6 +8,7 @@
     "price_range": null,
     "description": "Professional, fear-free dog walking serving Kitsilano and surrounding neighbourhoods. Known for carefully matched group hikes and detailed walk reports after every outing.",
     "image_url": "/images/walker-1.jpg",
+    "image_position": "50% 70%",
     "contact_info": {
       "email": null,
       "phone": "604-315-7956"
@@ -46,6 +47,7 @@
     "price_range": null,
     "description": "Boutique dog walking and boarding run by Tanya, a trusted name in the West End for over 12 years. Small pack sizes and genuine love for every dog.",
     "image_url": "/images/walker-3.jpg",
+    "image_position": "50% 35%",
     "contact_info": {
       "email": null,
       "phone": "604-781-7567"
@@ -65,6 +67,7 @@
     "price_range": null,
     "description": "Dog daycare and walking in Kitsilano with a focus on socialization and behaviour. Particularly well-regarded for working with rescues and reactive dogs.",
     "image_url": "/images/walker-4.jpg",
+    "image_position": "50% 80%",
     "contact_info": {
       "email": null,
       "phone": "604-442-5022"
@@ -103,6 +106,7 @@
     "price_range": null,
     "description": "North Vancouver's most established dog walking service with over 200 five-star reviews. Flexible scheduling, trail walks, and a team that genuinely knows every dog by name.",
     "image_url": "/images/walker-6.jpg",
+    "image_position": "50% 20%",
     "contact_info": {
       "email": null,
       "phone": "604-771-4294"
@@ -198,6 +202,7 @@
     "price_range": null,
     "description": "Full-service grooming boutique in the West End with 370+ reviews. A calm, thoughtful environment with groomers who take time to understand each dog's needs.",
     "image_url": "/images/groomer-1.jpg",
+    "image_position": "50% 20%",
     "contact_info": {
       "email": null,
       "phone": "604-568-6096"
@@ -236,6 +241,7 @@
     "price_range": null,
     "description": "Vancouver's top-rated positive reinforcement training studio with 194 five-star reviews. Offers puppy classes, group sessions, and private training for all ages and breeds.",
     "image_url": "/images/groomer-3.jpg",
+    "image_position": "50% 25%",
     "contact_info": {
       "email": null,
       "phone": "236-516-1008"

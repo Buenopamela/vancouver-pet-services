@@ -80,7 +80,7 @@ export default function HomePage() {
           {featured.map((listing) => (
             <div key={listing.id} style={{ background: C.white, border: `1.5px solid ${C.border}`, borderRadius: 16, overflow: 'hidden' }}>
               <div style={{ aspectRatio: '16/9', background: '#E7E5E4', overflow: 'hidden' }}>
-                <img src={listing.image_url} alt={listing.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <img src={listing.image_url} alt={listing.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: (listing as any).image_position || 'center', display: 'block' }} />
               </div>
               <div style={{ padding: '20px 24px 24px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 6 }}>

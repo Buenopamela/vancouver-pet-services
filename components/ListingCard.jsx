@@ -4,16 +4,18 @@ const serviceLabels = {
   walker: 'Dog Walker',
   grooming: 'Grooming',
   sitter: 'Pet Sitter',
+  trainer: 'Dog Trainer',
 }
 
 const serviceColors = {
   walker: 'bg-blue-100 text-blue-800',
   grooming: 'bg-purple-100 text-purple-800',
   sitter: 'bg-amber-100 text-amber-800',
+  trainer: 'bg-green-100 text-green-800',
 }
 
 export default function ListingCard({ listing }) {
-  const { slug, name, service_type, neighborhood, price_range, description, image_url } = listing
+  const { slug, name, service_type, neighborhood, price_range, description, image_url, image_position } = listing
 
   return (
     <Link href={`/listings/${slug}`} className="group block bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
@@ -22,6 +24,7 @@ export default function ListingCard({ listing }) {
           src={image_url}
           alt={name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          style={{ objectPosition: image_position || 'center' }}
         />
       </div>
       <div className="p-5">

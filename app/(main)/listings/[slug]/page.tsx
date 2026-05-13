@@ -36,7 +36,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const listing = getListingBySlug(slug)
   if (!listing) notFound()
 
-  const { name, service_type, neighborhood, price_range, description, image_url, contact_info, badges, testimonials } = listing
+  const { name, service_type, neighborhood, price_range, description, image_url, image_position, contact_info, badges, testimonials } = listing
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
@@ -48,7 +48,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
         {/* Left column */}
         <div className="lg:col-span-3 space-y-6">
           <div className="rounded-2xl overflow-hidden aspect-video bg-gray-100">
-            <img src={image_url} alt={name} className="w-full h-full object-cover" />
+            <img src={image_url} alt={name} className="w-full h-full object-cover" style={{ objectPosition: image_position || 'center' }} />
           </div>
 
           <div>
