@@ -1,5 +1,6 @@
 {
   "/(main)/listings/[slug]/page": "app/(main)/listings/[slug]/page.js",
   "/(main)/listings/neighbourhood/[neighbourhood]/page": "app/(main)/listings/neighbourhood/[neighbourhood]/page.js",
+  "/(main)/listings/neighbourhood/page": "app/(main)/listings/neighbourhood/page.js",
   "/(main)/listings/page": "app/(main)/listings/page.js"
 }
