@@ -1,0 +1,293 @@
+[
+  {
+    "id": 2,
+    "slug": "vancouver-canine-dog-walking",
+    "name": "Vancouver Canine Dog Walking",
+    "service_type": "walker",
+    "neighborhood": "Kitsilano",
+    "price_range": null,
+    "description": "Professional, fear-free dog walking serving Kitsilano and surrounding neighbourhoods. Known for carefully matched group hikes and detailed walk reports after every outing.",
+    "image_url": "/images/walker-1.jpg",
+    "image_position": "50% 70%",
+    "contact_info": {
+      "email": null,
+      "phone": "604-315-7956"
+    },
+    "featured": true,
+    "badges": ["Insured", "Group walks", "Walk reports"],
+    "testimonials": [
+      { "author": "Vancouver Canine client", "text": "Our two pups always came home so happy and tired. Their walk reports and pictures each walk are such an added bonus." }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "indiana-bones-dog-adventures",
+    "name": "Indiana Bones Dog Adventures",
+    "service_type": "walker",
+    "neighborhood": "Kitsilano",
+    "price_range": null,
+    "description": "Off-leash forest hikes and adventure walks for high-energy dogs in Vancouver. A favourite for owners who want more than a walk around the block.",
+    "image_url": "/images/walker-2.jpg",
+    "contact_info": {
+      "email": null,
+      "phone": null
+    },
+    "featured": false,
+    "badges": ["Off-leash hikes", "Pack care", "Overnight boarding"],
+    "testimonials": [
+      { "author": "Indiana Bones client", "text": "This isn't just a walk around the block — it's a real adventure. If you have a high-energy dog in Vancouver, this is the gold standard." }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "pawz-unleashed",
+    "name": "Pawz Unleashed",
+    "service_type": "walker",
+    "neighborhood": "West End",
+    "price_range": null,
+    "description": "Boutique dog walking and boarding run by Tanya, a trusted name in the West End for over 12 years. Small pack sizes and genuine love for every dog.",
+    "image_url": "/images/walker-3.jpg",
+    "image_position": "50% 35%",
+    "contact_info": {
+      "email": null,
+      "phone": "604-781-7567"
+    },
+    "featured": false,
+    "badges": ["12+ years experience", "Small packs", "Boarding"],
+    "testimonials": [
+      { "author": "Pawz Unleashed client", "text": "Tanya is hands down the best pet care provider. Our dog has been walking with her for 7+ years and loves every minute." }
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "noelles-pet-love",
+    "name": "Noelle's Pet Love",
+    "service_type": "walker",
+    "neighborhood": "Kitsilano",
+    "price_range": null,
+    "description": "Dog daycare and walking in Kitsilano with a focus on socialization and behaviour. Particularly well-regarded for working with rescues and reactive dogs.",
+    "image_url": "/images/walker-4.jpg",
+    "image_position": "50% 80%",
+    "contact_info": {
+      "email": null,
+      "phone": "604-442-5022"
+    },
+    "featured": false,
+    "badges": ["Daycare", "Beach walks", "Rescue-friendly"],
+    "testimonials": [
+      { "author": "Noelle's client", "text": "Noelle and her team helped our rescue improve his reactivity dramatically. He's now confident and happy around other dogs." }
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "sit-stay-sparkle",
+    "name": "Sit Stay Sparkle",
+    "service_type": "walker",
+    "neighborhood": "Mount Pleasant",
+    "price_range": null,
+    "description": "Trusted dog walking and in-home sitting serving Mount Pleasant and nearby neighbourhoods. Detailed post-walk reports, photos, and training reinforcement on every outing.",
+    "image_url": "/images/walker-5.jpg",
+    "contact_info": {
+      "email": null,
+      "phone": null
+    },
+    "featured": false,
+    "badges": ["Walk reports", "In-home sitting", "Training reinforcement"],
+    "testimonials": [
+      { "author": "Sit Stay Sparkle client", "text": "Sarah sends videos and pics from each walk, plus a full breakdown of how the walk went. Absolutely love this service." }
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "north-shore-dog-walkers",
+    "name": "North Shore Dog Walkers",
+    "service_type": "walker",
+    "neighborhood": "North Vancouver",
+    "price_range": null,
+    "description": "North Vancouver's most established dog walking service with over 200 five-star reviews. Flexible scheduling, trail walks, and a team that genuinely knows every dog by name.",
+    "image_url": "/images/walker-6.jpg",
+    "image_position": "50% 20%",
+    "contact_info": {
+      "email": null,
+      "phone": "604-771-4294"
+    },
+    "featured": false,
+    "badges": ["200+ reviews", "Trail walks", "Flexible scheduling"],
+    "testimonials": [
+      { "author": "North Shore Dog Walkers client", "text": "We've been using North Shore Dog Walkers for 4 years. Our dog loves his walkers and they always accommodate our ever-changing schedule." }
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "fairy-dog-mama",
+    "name": "Fairy Dog Mama",
+    "service_type": "walker",
+    "neighborhood": "North Vancouver",
+    "price_range": null,
+    "description": "Flexible, force-free dog walking and sitting in North Vancouver. Specializes in anxious and reactive dogs, with photo updates and genuine care on every visit.",
+    "image_url": "/images/walker-7.jpg",
+    "contact_info": {
+      "email": null,
+      "phone": "604-785-7311"
+    },
+    "featured": false,
+    "badges": ["Reactive dog friendly", "Photo updates", "Force-free"],
+    "testimonials": [
+      { "author": "Fairy Dog Mama client", "text": "Courtney understands the special requirements for our reactive dog and keeps our training journey on track. A true lifesaver." }
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "woof-dog-shoppe",
+    "name": "Woof! Dog Shoppe",
+    "service_type": "grooming",
+    "neighborhood": "Kitsilano",
+    "price_range": null,
+    "description": "Beloved Kitsilano grooming salon steps from the dog beach. Known for skilled, caring groomers and a warm atmosphere that keeps dogs calm and coming back.",
+    "image_url": "/images/walker-8.jpg",
+    "contact_info": {
+      "email": null,
+      "phone": "604-568-4212"
+    },
+    "featured": false,
+    "badges": ["Walk-ins welcome", "Nail trims", "Senior dog friendly"],
+    "testimonials": [
+      { "author": "Woof! client", "text": "I've been a customer for 8 years. My dogs always look and feel amazing — and they pull towards the shop whenever we walk by." }
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "paw-prints-grooming-salon",
+    "name": "Paw Prints Grooming Salon",
+    "service_type": "grooming",
+    "neighborhood": "Kitsilano",
+    "price_range": null,
+    "description": "Established Kitsilano grooming salon with 190+ reviews and a loyal following. Gentle with nervous dogs and known for seasonal photos and personalized care.",
+    "image_url": "/images/walker-9.jpg",
+    "contact_info": {
+      "email": null,
+      "phone": "604-733-1144"
+    },
+    "featured": false,
+    "badges": ["Nervous dog friendly", "Doodle specialists", "190+ reviews"],
+    "testimonials": [
+      { "author": "Paw Prints client", "text": "We've been using Paw Prints for years. Our rescue always goes reluctantly but comes out bright and happy — they take such gentle care." }
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "patikoy-pet-grooming-daycare",
+    "name": "Patikoy Pet Grooming & Daycare",
+    "service_type": "grooming",
+    "neighborhood": "Kitsilano",
+    "price_range": null,
+    "description": "Spacious, spotlessly clean grooming salon and daycare on West Broadway. Offers daily hikes and a low-stress environment that dogs genuinely love.",
+    "image_url": "/images/walker-10.jpg",
+    "contact_info": {
+      "email": null,
+      "phone": "604-733-0012"
+    },
+    "featured": false,
+    "badges": ["Daycare", "Daily hikes", "Online booking"],
+    "testimonials": [
+      { "author": "Patikoy client", "text": "Our dog pulls us from home all the way there with excitement. It's been brilliant for socialising her with other dogs." }
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "dashing-dawgs-grooming",
+    "name": "Dashing Dawgs Grooming & Boutique",
+    "service_type": "grooming",
+    "neighborhood": "West End",
+    "price_range": null,
+    "description": "Full-service grooming boutique in the West End with 370+ reviews. A calm, thoughtful environment with groomers who take time to understand each dog's needs.",
+    "image_url": "/images/groomer-1.jpg",
+    "image_position": "50% 20%",
+    "contact_info": {
+      "email": null,
+      "phone": "604-568-6096"
+    },
+    "featured": false,
+    "badges": ["370+ reviews", "Boutique", "Anxiety-friendly"],
+    "testimonials": [
+      { "author": "Dashing Dawgs client", "text": "Maki handled the drop-off so gently — I've never had a groomer manage separation anxiety so smoothly. I won't go anywhere else." }
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "lucky-tail-grooming",
+    "name": "Lucky Tail Grooming & Daycare",
+    "service_type": "grooming",
+    "neighborhood": "East Vancouver",
+    "price_range": null,
+    "description": "Highly rated grooming salon and daycare on Main Street with 225+ reviews. Friendly staff, reasonable prices, and a genuine commitment to every dog's comfort.",
+    "image_url": "/images/groomer-2.jpg",
+    "contact_info": {
+      "email": null,
+      "phone": "778-532-5721"
+    },
+    "featured": false,
+    "badges": ["225+ reviews", "Daycare", "Budget-friendly"],
+    "testimonials": [
+      { "author": "Lucky Tail client", "text": "The price is very reasonable and the quality of service is exceptional. I always come back to Lucky Tail — they do such a great job." }
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "raintown-dog-training",
+    "name": "Raintown Dog Training",
+    "service_type": "trainer",
+    "neighborhood": "Mount Pleasant",
+    "price_range": null,
+    "description": "Vancouver's top-rated positive reinforcement training studio with 194 five-star reviews. Offers puppy classes, group sessions, and private training for all ages and breeds.",
+    "image_url": "/images/groomer-3.jpg",
+    "image_position": "50% 25%",
+    "contact_info": {
+      "email": null,
+      "phone": "236-516-1008"
+    },
+    "featured": true,
+    "badges": ["Positive reinforcement", "Puppy classes", "194 reviews"],
+    "testimonials": [
+      { "author": "Raintown client", "text": "Before we even put the car in park our pup was losing it — she couldn't wait to get inside to see her friends and favourite trainers." }
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "bow-wow-academy",
+    "name": "Bow Wow Academy",
+    "service_type": "trainer",
+    "neighborhood": "North Vancouver",
+    "price_range": null,
+    "description": "North Vancouver's most-reviewed dog training school with 457 five-star ratings. Yoko and her team use positive reinforcement to build confident, well-mannered dogs.",
+    "image_url": "/images/groomer-4.jpg",
+    "contact_info": {
+      "email": null,
+      "phone": "604-765-7071"
+    },
+    "featured": true,
+    "badges": ["457 reviews", "Positive reinforcement", "Puppy & teen classes"],
+    "testimonials": [
+      { "author": "Bow Wow Academy client", "text": "Yoko literally helped change my life as a dog owner. In a matter of weeks, walking our reactive rescue became so much more enjoyable." }
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "cascadia-dog-training",
+    "name": "Cascadia Dog Training",
+    "service_type": "trainer",
+    "neighborhood": "North Vancouver",
+    "price_range": null,
+    "description": "Highly respected North Vancouver training company known for transforming reactive and anxious dogs. Private sessions, group classes, and a deeply caring team.",
+    "image_url": "/images/groomer-5.jpg",
+    "contact_info": {
+      "email": null,
+      "phone": "778-382-8691"
+    },
+    "featured": false,
+    "badges": ["Reactive dogs", "Private sessions", "189 reviews"],
+    "testimonials": [
+      { "author": "Cascadia client", "text": "We were at a loss and it was our last try before giving our rescue away. Now Hunter can stay alone for 4 hours and his walks are peaceful." }
+    ]
+  }
+]
