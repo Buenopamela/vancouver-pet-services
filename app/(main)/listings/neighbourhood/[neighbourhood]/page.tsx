@@ -24,9 +24,15 @@ export async function generateMetadata({ params }: { params: Promise<{ neighbour
   const { neighbourhood } = await params
   const label = neighbourhoodLabels[neighbourhood]
   if (!label) return {}
+  const { data: listings } = await supabase
+    .from('listings')
+    .select('*')
+    .eq('neighborhood', label)
+  const hasListings = (listings ?? []).length > 0
   return {
     title: `Pet Services in ${label} — Dog Walkers, Groomers & Sitters | Vancouver Pet Services`,
     description: `Find trusted dog walkers, groomers, pet sitters and trainers in ${label}. Browse verified local pet care providers near you.`,
+    robots: hasListings ? { index: true, follow: true } : { index: false, follow: false },
   }
 }
 
