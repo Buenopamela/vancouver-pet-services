@@ -1,4 +1,4 @@
-import { getListingBySlug, getListings } from '@/lib/listings'
+import { supabase } from '@/lib/supabase'
 import LeadForm from '@/components/LeadForm'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -18,12 +18,13 @@ const serviceColors: Record<string, string> = {
 }
 
 export async function generateStaticParams() {
-  return getListings().map((l) => ({ slug: l.slug }))
+  const { data: listings } = await supabase.from('listings').select('slug')
+  return (listings ?? []).map((l) => ({ slug: l.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const listing = getListingBySlug(slug)
+  const { data: listing } = await supabase.from('listings').select('*').eq('slug', slug).single()
   if (!listing) return {}
   return {
     title: `${listing.name} — Vancouver Pet Services`,
@@ -33,7 +34,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ListingPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const listing = getListingBySlug(slug)
+  const { data: listing } = await supabase
+    .from('listings')
+    .select('*')
+    .eq('slug', slug)
+    .single()
   if (!listing) notFound()
 
   const { name, service_type, neighborhood, price_range, description, image_url, image_position, contact_info, badges, testimonials } = listing
