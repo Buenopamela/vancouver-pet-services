@@ -5,6 +5,8 @@ const serviceLabels = {
   grooming: 'Grooming',
   sitter: 'Pet Sitter',
   trainer: 'Dog Trainer',
+  boarding: 'Boarding',
+  vet: 'Veterinarian',
 }
 
 const serviceColors = {
@@ -12,19 +14,31 @@ const serviceColors = {
   grooming: 'bg-purple-100 text-purple-800',
   sitter: 'bg-amber-100 text-amber-800',
   trainer: 'bg-green-100 text-green-800',
+  boarding: 'bg-orange-100 text-orange-800',
+  vet: 'bg-sky-100 text-sky-800',
+}
+
+const serviceBanners = {
+  walker: '/images/services/dog-walkers.jpg',
+  grooming: '/images/services/groomers.jpg',
+  sitter: '/images/services/pet-sitters.jpg',
+  trainer: '/images/services/trainers.jpg',
+  boarding: '/images/services/boarding.jpg',
+  vet: '/images/services/vets.jpg',
 }
 
 export default function ListingCard({ listing }) {
   const { slug, name, service_type, neighborhood, price_range, description, image_url, image_position } = listing
+  const cardImage = image_url || serviceBanners[service_type]
 
   return (
     <Link href={`/listings/${slug}`} className="group block bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
       <div className="aspect-video overflow-hidden bg-gray-100">
         <img
-          src={image_url}
+          src={cardImage}
           alt={name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          style={{ objectPosition: image_position || 'center' }}
+          style={{ objectPosition: image_url ? (image_position || 'center') : 'center' }}
         />
       </div>
       <div className="p-5">
