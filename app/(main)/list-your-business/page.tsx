@@ -12,7 +12,7 @@ export default function ListYourBusinessPage() {
     const data = new FormData(form)
 
     try {
-      const res = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_URL!, {
+      const res = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_LIST_URL!, {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
