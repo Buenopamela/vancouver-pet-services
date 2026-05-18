@@ -3,6 +3,8 @@ import ListingsClient from '@/components/ListingsClient'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
+export const revalidate = 60
+
 const neighbourhoodLabels: Record<string, string> = {
   'kitsilano': 'Kitsilano',
   'west-end': 'West End',
