@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabase'
 import LeadForm from '@/components/LeadForm'
+import ClaimListingModal from '@/components/ClaimListingModal'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -75,6 +76,8 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
               </div>
             )}
           </div>
+
+          <ClaimListingModal slug={slug} />
 
           <div className="bg-white rounded-2xl border border-gray-100 p-6">
             <h2 className="font-semibold text-[#1E3A5F] mb-3">Contact info</h2>
