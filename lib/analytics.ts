@@ -36,3 +36,7 @@ export const trackLeadFormSubmit = (businessName: string) => {
     business_name: businessName,
   });
 };
+
+export const trackEvent = (eventName: string) => {
+  window.gtag("event", eventName);
+};

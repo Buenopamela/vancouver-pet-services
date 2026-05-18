@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { trackClaimListing } from '@/lib/analytics'
+import { trackEvent } from '@/lib/analytics'
 
 const C = {
   dark: '#1C1917',
@@ -30,7 +30,7 @@ export default function ListBusinessForm() {
       if (res.ok) {
         setStatus('success')
         e.target.reset()
-        trackClaimListing('listing_page')
+        trackEvent('list_business_submit')
       } else {
         setStatus('error')
       }
