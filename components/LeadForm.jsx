@@ -13,7 +13,7 @@ export default function LeadForm({ listingName }) {
     const data = new FormData(form)
 
     try {
-      const res = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_URL, {
+      const res = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_QUOTE_URL, {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },

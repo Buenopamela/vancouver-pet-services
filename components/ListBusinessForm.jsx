@@ -22,7 +22,7 @@ export default function ListBusinessForm() {
     const data = new FormData(e.target)
 
     try {
-      const res = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_URL, {
+      const res = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_LIST_URL, {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
