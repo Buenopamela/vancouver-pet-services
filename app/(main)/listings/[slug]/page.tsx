@@ -160,6 +160,19 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                   </a>
                 </li>
               )}
+              {contact_info.address && (
+                <li>
+                  <span className="font-medium">Address: </span>
+                  {contact_info.address}
+                </li>
+              )}
+              {contact_info.website && (
+                <li>
+                  <a href={contact_info.website} target="_blank" rel="noopener noreferrer" className="text-[#16A34A] hover:underline">
+                    Visit Website →
+                  </a>
+                </li>
+              )}
               <li>
                 <span className="font-medium">Service area: </span>
                 {neighborhood}, Vancouver, BC
