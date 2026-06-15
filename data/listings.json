@@ -79,25 +79,6 @@
     ]
   },
   {
-    "id": 6,
-    "slug": "sit-stay-sparkle",
-    "name": "Sit Stay Sparkle",
-    "service_type": "walker",
-    "neighborhood": "Mount Pleasant",
-    "price_range": null,
-    "description": "Trusted dog walking and in-home sitting serving Mount Pleasant and nearby neighbourhoods. Detailed post-walk reports, photos, and training reinforcement on every outing.",
-    "image_url": "/images/walker-5.jpg",
-    "contact_info": {
-      "email": null,
-      "phone": null
-    },
-    "featured": false,
-    "badges": ["Walk reports", "In-home sitting", "Training reinforcement"],
-    "testimonials": [
-      { "author": "Sit Stay Sparkle client", "text": "Sarah sends videos and pics from each walk, plus a full breakdown of how the walk went. Absolutely love this service." }
-    ]
-  },
-  {
     "id": 7,
     "slug": "north-shore-dog-walkers",
     "name": "North Shore Dog Walkers",
