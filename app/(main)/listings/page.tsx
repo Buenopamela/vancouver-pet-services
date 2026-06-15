@@ -2,6 +2,8 @@ import { supabase } from '@/lib/supabase'
 import ListingsClient from '@/components/ListingsClient'
 import Link from 'next/link'
 
+export const revalidate = 60
+
 export const metadata = {
   title: 'Pet Services in Vancouver — Dog Walkers, Groomers & Sitters | Vancouver Pet Services',
   description: 'Browse trusted dog walkers, groomers, and pet sitters in Vancouver, BC. Filter by neighbourhood and service type to find the right match near you.',

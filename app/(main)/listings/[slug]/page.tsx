@@ -4,6 +4,8 @@ import ClaimListingModal from '@/components/ClaimListingModal'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
+export const revalidate = 60
+
 const serviceLabels: Record<string, string> = {
   walker: 'Dog Walker',
   grooming: 'Dog Groomer',
