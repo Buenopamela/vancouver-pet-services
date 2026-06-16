@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase'
+import { SERVICE_TYPES } from '@/lib/serviceTypes'
 import LeadForm from '@/components/LeadForm'
 import ClaimListingModal from '@/components/ClaimListingModal'
 import NeighbourhoodBrowser from '@/components/NeighbourhoodBrowser'
@@ -6,42 +7,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 export const revalidate = 60
-
-const serviceLabels: Record<string, string> = {
-  walker: 'Dog Walker',
-  grooming: 'Dog Groomer',
-  sitter: 'Pet Sitter',
-  trainer: 'Dog Trainer',
-  boarding: 'Dog Boarding',
-  vet: 'Veterinarian',
-}
-
-const serviceColors: Record<string, string> = {
-  walker: 'bg-blue-100 text-blue-800',
-  grooming: 'bg-purple-100 text-purple-800',
-  sitter: 'bg-amber-100 text-amber-800',
-  trainer: 'bg-green-100 text-green-800',
-  boarding: 'bg-orange-100 text-orange-800',
-  vet: 'bg-sky-100 text-sky-800',
-}
-
-const serviceBanners: Record<string, string> = {
-  walker: '/images/services/dog-walkers.jpg',
-  grooming: '/images/services/groomers.jpg',
-  sitter: '/images/services/pet-sitters.jpg',
-  trainer: '/images/services/trainers.jpg',
-  boarding: '/images/services/boarding.jpg',
-  vet: '/images/services/vets.jpg',
-}
-
-const schemaTypes: Record<string, string> = {
-  walker: 'LocalBusiness',
-  grooming: 'LocalBusiness',
-  sitter: 'LocalBusiness',
-  trainer: 'LocalBusiness',
-  boarding: 'LocalBusiness',
-  vet: 'VeterinaryCare',
-}
 
 function serviceArea(neighborhood: string): string {
   if (neighborhood.toLowerCase().includes('vancouver')) return `Serving ${neighborhood}`
@@ -57,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const { data: listing } = await supabase.from('listings').select('*').eq('slug', slug).single()
   if (!listing) return {}
-  const serviceLabel = serviceLabels[listing.service_type] ?? listing.service_type
+  const serviceLabel = SERVICE_TYPES[listing.service_type]?.label ?? listing.service_type
   return {
     title: `${listing.name} | ${serviceLabel} in ${listing.neighborhood}, Vancouver`,
     description: listing.description,
@@ -74,12 +39,13 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   if (!listing) notFound()
 
   const { name, service_type, neighborhood, price_range, description, image_url, image_position, contact_info, badges, testimonials } = listing
-  const heroImage = image_url || serviceBanners[service_type]
-  const serviceLabel = serviceLabels[service_type] ?? service_type
+  const config = SERVICE_TYPES[service_type] ?? {}
+  const heroImage = image_url || config.banner
+  const serviceLabel = config.label ?? service_type
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': schemaTypes[service_type] ?? 'LocalBusiness',
+    '@type': config.schemaType ?? 'LocalBusiness',
     name,
     description,
     telephone: contact_info?.phone ?? undefined,
@@ -117,7 +83,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           <div>
             <div className="flex flex-wrap items-start gap-3 mb-2">
               <h1 className="text-3xl font-bold text-[#1E3A5F]">{name}</h1>
-              <span className={`text-sm font-medium px-3 py-1 rounded-full ${serviceColors[service_type]}`}>
+              <span className={`text-sm font-medium px-3 py-1 rounded-full ${config.color ?? ''}`}>
                 {serviceLabel}
               </span>
             </div>

@@ -1,13 +1,27 @@
 'use client'
 
-const serviceLabels = {
-  walker: 'Dog Walkers',
-  grooming: 'Groomers',
-  sitter: 'Pet Sitters',
-  trainer: 'Dog Trainers',
-}
+import { useEffect, useState } from 'react'
+import { supabase } from '@/lib/supabase'
+import { SERVICE_TYPES } from '@/lib/serviceTypes'
+
+const fallbackTypes = Object.keys(SERVICE_TYPES)
 
 export default function FilterBar({ neighborhoods, filters, onChange }) {
+  const [activeTypes, setActiveTypes] = useState(fallbackTypes)
+
+  useEffect(() => {
+    supabase
+      .from('listings')
+      .select('service_type')
+      .then(({ data, error }) => {
+        if (error || !data) return
+        const distinct = [...new Set(data.map((r) => r.service_type))].filter(
+          (t) => t && SERVICE_TYPES[t]
+        )
+        if (distinct.length > 0) setActiveTypes(distinct)
+      })
+  }, [])
+
   return (
     <div className="flex flex-wrap gap-3 mb-8">
       <select
@@ -16,8 +30,10 @@ export default function FilterBar({ neighborhoods, filters, onChange }) {
         className="border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#16A34A]"
       >
         <option value="">All Services</option>
-        {Object.entries(serviceLabels).map(([value, label]) => (
-          <option key={value} value={value}>{label}</option>
+        {activeTypes.map((type) => (
+          <option key={type} value={type}>
+            {SERVICE_TYPES[type].label}
+          </option>
         ))}
       </select>
 
