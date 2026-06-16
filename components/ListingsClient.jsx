@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import ListingCard from '@/components/ListingCard'
 import FilterBar from '@/components/FilterBar'
 
-export default function ListingsClient({ listings, neighborhoods }) {
+export default function ListingsClient({ listings, neighborhoods, location = 'Vancouver' }) {
   const [filters, setFilters] = useState({ service_type: '', neighborhood: '' })
 
   const filtered = useMemo(() => {
@@ -18,7 +18,7 @@ export default function ListingsClient({ listings, neighborhoods }) {
   return (
     <>
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-[#1E3A5F] mb-1">Pet services in Vancouver</h1>
+        <h1 className="text-3xl font-bold text-[#1E3A5F] mb-1">Pet services in {location}</h1>
         <p className="text-gray-500">{filtered.length} service{filtered.length !== 1 ? 's' : ''} found</p>
       </div>
 

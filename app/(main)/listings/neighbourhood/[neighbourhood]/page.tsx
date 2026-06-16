@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabase'
 import ListingsClient from '@/components/ListingsClient'
+import NeighbourhoodBrowser from '@/components/NeighbourhoodBrowser'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
@@ -55,7 +56,8 @@ export default async function NeighbourhoodPage({ params }: { params: Promise<{ 
       <Link href="/listings" className="text-sm text-[#16A34A] hover:underline mb-6 inline-block">
         ← All Vancouver pet services
       </Link>
-      <ListingsClient listings={listings ?? []} neighborhoods={neighborhoods} />
+      <ListingsClient listings={listings ?? []} neighborhoods={neighborhoods} location={label} />
+      <NeighbourhoodBrowser />
     </div>
   )
 }

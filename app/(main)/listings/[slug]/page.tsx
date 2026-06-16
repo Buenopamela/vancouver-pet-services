@@ -1,6 +1,7 @@
 import { supabase } from '@/lib/supabase'
 import LeadForm from '@/components/LeadForm'
 import ClaimListingModal from '@/components/ClaimListingModal'
+import NeighbourhoodBrowser from '@/components/NeighbourhoodBrowser'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -204,6 +205,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </div>
+      <NeighbourhoodBrowser />
     </div>
   )
 }
