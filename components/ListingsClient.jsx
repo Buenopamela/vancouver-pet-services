@@ -4,7 +4,10 @@ import { useState, useMemo } from 'react'
 import ListingCard from '@/components/ListingCard'
 import FilterBar from '@/components/FilterBar'
 
-export default function ListingsClient({ listings, neighborhoods, location = 'Vancouver' }) {
+/**
+ * @param {{ listings: any[], neighborhoods: string[], location?: string, intro?: string[] }} props
+ */
+export default function ListingsClient({ listings, neighborhoods, location = 'Vancouver', intro = [] }) {
   const [filters, setFilters] = useState({ service_type: '', neighborhood: '' })
 
   const filtered = useMemo(() => {
@@ -21,6 +24,14 @@ export default function ListingsClient({ listings, neighborhoods, location = 'Va
         <h1 className="text-3xl font-bold text-[#1E3A5F] mb-1">Pet services in {location}</h1>
         <p className="text-gray-500">{filtered.length} service{filtered.length !== 1 ? 's' : ''} found</p>
       </div>
+
+      {intro && intro.length > 0 && (
+        <div className="mb-8 space-y-4 max-w-3xl text-gray-600 leading-relaxed">
+          {intro.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </div>
+      )}
 
       <FilterBar neighborhoods={neighborhoods} filters={filters} onChange={setFilters} />
 
