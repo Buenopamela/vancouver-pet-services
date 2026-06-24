@@ -164,7 +164,7 @@ export default function HomePage() {
             List your business
           </h2>
           <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', margin: '0 0 40px', lineHeight: 1.65, textAlign: 'center' }}>
-            Free during our launch phase. We'll review your submission and be in touch within 2 business days.
+            Early listings get priority placement. We'll review your submission and be in touch within 2 business days.
           </p>
           <ListBusinessForm />
         </div>
