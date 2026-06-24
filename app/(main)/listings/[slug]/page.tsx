@@ -1,6 +1,7 @@
 import { supabase } from '@/lib/supabase'
 import { SERVICE_TYPES } from '@/lib/serviceTypes'
-import LeadForm from '@/components/LeadForm'
+import VisitWebsiteButton from '@/components/VisitWebsiteButton'
+import EmailCapture from '@/components/EmailCapture'
 import ClaimListingModal from '@/components/ClaimListingModal'
 import NeighbourhoodBrowser from '@/components/NeighbourhoodBrowser'
 import Link from 'next/link'
@@ -135,13 +136,6 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                   {contact_info.address}
                 </li>
               )}
-              {contact_info.website && (
-                <li>
-                  <a href={contact_info.website} target="_blank" rel="noopener noreferrer" className="text-[#16A34A] hover:underline">
-                    Visit Website →
-                  </a>
-                </li>
-              )}
               <li>
                 <span className="font-medium">Service area: </span>
                 {neighborhood}, Vancouver, BC
@@ -164,10 +158,13 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           )}
         </div>
 
-        {/* Right column — lead form */}
+        {/* Right column — primary CTA */}
         <div className="lg:col-span-2">
-          <div className="lg:sticky lg:top-8">
-            <LeadForm listingName={name} />
+          <div className="lg:sticky lg:top-8 space-y-6">
+            {contact_info.website && (
+              <VisitWebsiteButton website={contact_info.website} businessName={name} />
+            )}
+            <EmailCapture />
           </div>
         </div>
       </div>

@@ -143,7 +143,7 @@ export default function HomePage() {
           {[
             { n: '01', title: 'Search your area', desc: 'Filter by service type and neighbourhood to find the right match near you.' },
             { n: '02', title: 'Review the profile', desc: 'Check photos, price range, client testimonials, and the area they serve.' },
-            { n: '03', title: 'Request a quote', desc: 'Send a short message and hear back directly from the service provider.' },
+            { n: '03', title: 'Connect directly', desc: 'Visit their website to book or get in touch — no middleman, no waiting on a quote.' },
           ].map(({ n, title, desc }) => (
             <div key={n}>
               <div style={{ fontSize: 56, fontWeight: 900, color: C.border, lineHeight: 1, letterSpacing: '-3px', marginBottom: 16 }}>{n}</div>
