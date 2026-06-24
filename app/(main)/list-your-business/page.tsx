@@ -33,7 +33,7 @@ export default function ListYourBusinessPage() {
       <div className="text-center mb-10">
         <h1 className="text-3xl font-bold text-[#1E3A5F] mb-3">List your business</h1>
         <p className="text-gray-500">
-          Get discovered by pet owners in Vancouver. Listing is free during our launch phase.
+          Get discovered by pet owners in Vancouver. Early listings get priority placement.
         </p>
       </div>
 
@@ -145,7 +145,7 @@ export default function ListYourBusinessPage() {
             </button>
 
             <p className="text-white/50 text-xs text-center">
-              Free during launch. We'll review and add your listing within 48 hours.
+              Early listings get priority placement. We'll review and add your listing within 48 hours.
             </p>
           </form>
         )}
