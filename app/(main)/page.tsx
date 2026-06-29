@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import Image from 'next/image'
 import { getListings, getFeaturedListings } from '@/lib/listings'
 import ListBusinessForm from '@/components/ListBusinessForm'
 
@@ -77,10 +78,17 @@ export default function HomePage() {
           <a href="/listings" style={{ fontSize: 13, color: C.green, fontWeight: 600, textDecoration: 'none' }}>View all →</a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featured.map((listing) => (
+          {featured.map((listing, i) => (
             <div key={listing.id} style={{ background: C.white, border: `1.5px solid ${C.border}`, borderRadius: 16, overflow: 'hidden' }}>
-              <div style={{ aspectRatio: '16/9', background: '#E7E5E4', overflow: 'hidden' }}>
-                <img src={listing.image_url} alt={listing.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: (listing as any).image_position || 'center', display: 'block' }} />
+              <div style={{ aspectRatio: '16/9', background: '#E7E5E4', overflow: 'hidden', position: 'relative' }}>
+                <Image
+                  src={listing.image_url}
+                  alt={listing.name}
+                  fill
+                  priority={i === 0}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  style={{ objectFit: 'cover', objectPosition: (listing as any).image_position || 'center' }}
+                />
               </div>
               <div style={{ padding: '20px 24px 24px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 6 }}>
